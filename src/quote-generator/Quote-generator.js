@@ -84,7 +84,9 @@ function QuoteText({ quote }) {
   return (
     <div className="quote-text">
       <i className="fas fa-quote-left"></i>
-      <span>{quote.text}</span>
+      <span className={quote?.text?.length > 120 ? "long-quote" : ""}>
+        {quote.text}
+      </span>
     </div>
   );
 }
